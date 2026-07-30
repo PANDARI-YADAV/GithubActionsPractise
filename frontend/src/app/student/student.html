@@ -1,0 +1,42 @@
+<div class="dashboard">
+  <div class="dashboard-header">
+    <div class="header-icon">⚙️</div>
+    <div>
+      <h1>DevOps Engineers</h1>
+      <p class="subtitle">Infrastructure & Deployment Team</p>
+    </div>
+  </div>
+
+  <div class="cards-grid">
+    @for(student of students; track student.id) {
+      <div class="card">
+        <div class="card-header">
+          <div class="avatar-wrap">
+            <div class="avatar">{{ student.name[0] }}</div>
+            <span class="avatar-name">{{ student.name }}</span>
+          </div>
+          <div class="badge">DevOps</div>
+        </div>
+        <div class="card-body">
+          <h2 class="name">{{ student.name }}</h2>
+          <p class="role">DevOps Engineer</p>
+          <div class="info-row">
+            <span class="label">ID</span>
+            <span class="value">#{{ student.id }}</span>
+          </div>
+          <div class="info-row">
+            <span class="label">Stack</span>
+            <span class="value">Docker · K8s · CI/CD</span>
+          </div>
+          <div class="info-row">
+            <span class="label">Status</span>
+            <span class="status-dot"></span><span class="value active">Active</span>
+          </div>
+        </div>
+        <div class="card-footer">
+          <button class="btn">View Profile</button>
+        </div>
+      </div>
+    }
+  </div>
+</div>
