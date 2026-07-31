@@ -7,12 +7,11 @@ import { Observable } from 'rxjs';
 })
 export class StudentService {
 
-  private apiUrl = '/students';
+  private apiUrl = 'http://34.229.89.158:8080/students';
 
   constructor(private http: HttpClient) {}
 
   getStudents(): Observable<any[]> {
     return this.http.get<any[]>(this.apiUrl);
   }
-
 }
