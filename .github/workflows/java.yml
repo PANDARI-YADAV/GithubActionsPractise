@@ -132,5 +132,5 @@ jobs:
           key: ${{ secrets.EC2_SSH_KEY }}
           script: |
             sudo rm -rf /var/www/html/*
-            sudo cp -r /home/ubuntu/frontend/frontend/browser/* /var/www/html/
+            sudo cp -r /home/ubuntu/frontend/* /var/www/html/
             sudo systemctl restart nginx
