@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.RestController;
 import java.util.List;
 
 @RestController
-@CrossOrigin(origins = "http://98.93.223.103")
+@CrossOrigin(origins = "*")
 @RequestMapping("/students")
 public class StudentController {
 
